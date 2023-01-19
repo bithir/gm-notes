@@ -1,3 +1,6 @@
+v7.01
+Updated build & package process to include devmessage.js
+
 v7.0
 
 Initial release after shifting module responsibility. Bithir is now the new maintainer.
