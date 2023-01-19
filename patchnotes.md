@@ -1,4 +1,9 @@
+v7.10
+
+Ensure that version numbers are consistent between patch, foundry config and module.
+
 v7.01
+
 Updated build & package process to include devmessage.js
 
 v7.0
