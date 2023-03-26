@@ -1,1 +1,8 @@
-{}
+{
+    "GMNote.setting": "Ocultar Etiqueta de Nota do GM",
+    "GMNote.settingHint": "Se marcado apenas o ícone irá aparecer",
+    "GMNote.colorSetting": "Mude a cor quando as notas estiverem presentes",
+    "GMNote.moveToDescription": "Mover GM Notes para Descrição",
+    "GMNote.label": "GM Notes",
+    "GMNote.moveToNote": "Mover descrição para GM Notes"
+}
