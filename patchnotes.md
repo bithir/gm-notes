@@ -1,3 +1,7 @@
+v7.11
+
+- Added Portguese via eunaumtenhoid@weblate
+
 v7.10
 
 Ensure that version numbers are consistent between patch, foundry config and module.
