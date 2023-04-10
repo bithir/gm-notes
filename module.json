@@ -59,6 +59,11 @@
             "lang": "pt-BR",
             "name": "Português (Brasil)",
             "path": "lang/pt_BR.json"
+        },
+        {
+            "lang": "pl",
+            "name": "Polski",
+            "path": "lang/pl.json"
         }
     ],
     "url": "https://github.com/syl3r86/gm-notes",
