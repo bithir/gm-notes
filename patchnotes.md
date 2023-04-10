@@ -1,5 +1,9 @@
 v7.11
 
+- Added Polish via Akinax@weblate
+ 
+v7.11
+
 - Added Portguese via eunaumtenhoid@weblate
 
 v7.10
