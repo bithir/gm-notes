@@ -1,4 +1,4 @@
-v7.22
+v7.24
 
 - Updated build method
 - Changed tooltip
