@@ -114,10 +114,10 @@ jobs:
             `# Options`                          \
             --recurse-paths                      \
             `# The name of the output file`      \
-            ./module.zip                        \
+            ./module.zip                         \
             `# The files that will be included.` \
             module.json                          \
-            README.md                            \            
+            README.md                            \
             LICENSE                              \
             gm-notes.js                          \
             devmessage.js                        \
