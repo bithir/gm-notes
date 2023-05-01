@@ -3,7 +3,7 @@
     "id": "gm-notes",
     "title": "GM Notes",
     "description": "Adds the option to create Notes for Actors, Items, Lights, Tiles, Drawings and JournalEntrys only accessible to GMs",
-    "version": "0.7.0",
+    "version": "#{VERSION}#",
     "authors": [
         {
             "name": "Bithir",
@@ -66,7 +66,9 @@
             "path": "lang/pl.json"
         }
     ],
-    "url": "https://github.com/syl3r86/gm-notes",
-    "manifest": "https://raw.githubusercontent.com/syl3r86/gm-notes/master/module.json",
-    "download": "https://github.com/syl3r86/gm-notes/archive/master.zip"
+    "url": "#{URL}#",
+    "manifest": "#{MANIFEST}#",
+    "download": "#{DOWNLOAD}#",
+    "license": "LICENSE",
+    "readme": "README.md"
 }
