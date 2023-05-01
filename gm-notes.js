@@ -96,7 +96,7 @@ class GMNote extends FormApplication {
                 labelStyle = "style='color:green;'";
             }
 
-            let openBtn = $(`<a class="open-gm-note" title="${title}" ${labelStyle} ><i class="fas fa-clipboard${notes ? '-check':''}"></i>${labelTxt}</a>`);
+            let openBtn = $(`<a class="open-gm-note" data-tooltip="${title}" ${labelStyle} ><i class="fas fa-clipboard${notes ? '-check':''}"></i>${labelTxt}</a>`);
             openBtn.click(ev => {
                 let noteApp = null;
                 for (let key in app.object.apps) {
