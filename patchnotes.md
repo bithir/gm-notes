@@ -1,3 +1,8 @@
+v7.12
+
+- Updated build method
+- Changed tooltip
+
 v7.11
 
 - Added Polish via Akinax@weblate
