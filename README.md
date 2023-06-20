@@ -12,8 +12,12 @@ This module is system independent, but has an additional feature to easily move 
 
 ## Contribution
 A massive thanks to the original author Felix Müller (syl3r86 - Paypal: felix.mueller.86@web.de)
-French Translation by baktov#773, Japanese translation by Brother Sharp#6921
 
+### Translations
+This project exists on weblate - see https://weblate.foundryvtt-hub.com/projects/gm-notes/
+To help contribute for via weblate, see https://weblate.foundryvtt-hub.com/
+
+Original French Translation by baktov#773, Japanese translation by Brother Sharp#6921
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">GM Notes - a module for Foundry VTT -</span> originally created by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/syl3r86?tab=repositories" property="cc:attributionName" rel="cc:attributionURL">Felix Müller</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
