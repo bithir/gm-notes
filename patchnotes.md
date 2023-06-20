@@ -1,3 +1,10 @@
+v8.1
+- Updated polish language support (thanks Lioheart@weblate)
+
+v8.0
+- Updated for v11 support
+
+
 v7.24
 
 - Updated build method
