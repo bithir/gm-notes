@@ -2,5 +2,7 @@
     "GMNote.label": "Notatki MG",
     "GMNote.settingHint": "Jeśli zaznaczone, pojawi się tylko ikona",
     "GMNote.colorSetting": "Zmienia kolor, gdy obecne są notatki",
-    "GMNote.moveToNote": "Przenieś opis do notatek MG"
+    "GMNote.moveToNote": "Przenieś opis do notatek MG",
+    "GMNote.setting": "Ukryj etykietę GM Note",
+    "GMNote.moveToDescription": "Przenieś GM Notes do Opisu"
 }
