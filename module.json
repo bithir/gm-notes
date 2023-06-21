@@ -64,6 +64,11 @@
             "lang": "pl",
             "name": "Polski",
             "path": "lang/pl.json"
+        },
+        {
+            "lang": "sv",
+            "name": "Svenska",
+            "path": "lang/sv.json"
         }
     ],
     "url": "#{URL}#",
