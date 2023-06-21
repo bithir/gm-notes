@@ -1,3 +1,6 @@
+v8.2
+- Added Swedish support
+
 v8.1
 - Updated polish language support (thanks Lioheart@weblate)
 
