@@ -15,7 +15,7 @@ A massive thanks to the original author Felix Müller (syl3r86 - Paypal: felix.m
 
 ### Translations
 This project exists on weblate - see https://weblate.foundryvtt-hub.com/projects/gm-notes/
-To help contribute for via weblate, see https://weblate.foundryvtt-hub.com/
+To help contribute to GM Note via weblate, see https://weblate.foundryvtt-hub.com/
 
 Original French Translation by baktov#773, Japanese translation by Brother Sharp#6921
 
