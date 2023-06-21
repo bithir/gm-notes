@@ -1,1 +1,8 @@
-{}
+{
+    "GMNote.setting": "Göm texten för SL Notering",
+    "GMNote.colorSetting": "Ändra färg på ikonen när det finns en SL notering",
+    "GMNote.moveToDescription": "Flytta SL notering till beskrivning",
+    "GMNote.moveToNote": "Flytta beskrivning till SL notering",
+    "GMNote.label": "SL Noteringar",
+    "GMNote.settingHint": "Fyll i kryssrutan för att bara visa ikon och ingen text"
+}
