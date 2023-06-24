@@ -1,3 +1,6 @@
+v8.3
+- Added Finnish support
+
 v8.2
 - Added Swedish support
 
