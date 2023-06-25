@@ -1,5 +1,5 @@
 v8.3
-- Added Finnish support
+- Added Finnish support (thanks Demian@Weblate)
 
 v8.2
 - Added Swedish support
