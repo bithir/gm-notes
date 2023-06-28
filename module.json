@@ -74,6 +74,11 @@
             "lang": "fi",
             "name": "Suomi",
             "path": "lang/fi.json"
+        },
+        {
+            "lang": "es",
+            "name": "Spanish",
+            "path": "lang/es.json"
         }
     ],
     "url": "#{URL}#",
