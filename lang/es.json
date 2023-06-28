@@ -1,0 +1,8 @@
+{
+    "GMNote.label": "Notas de DJ",
+    "GMNote.setting": "Ocultar etiqueta de nota de DJ",
+    "GMNote.settingHint": "Al marcarlo solo aparecerá el icono",
+    "GMNote.colorSetting": "Cambiar el color cuando hay notas",
+    "GMNote.moveToDescription": "Mover notas de DJ a descripción",
+    "GMNote.moveToNote": "Mover descripción a notas de DJ"
+}
