@@ -1,3 +1,6 @@
+v8.4
+- Added Spanish support (thanks @erizocosmico)
+
 v8.3
 - Added Finnish support (thanks Demian@Weblate)
 
