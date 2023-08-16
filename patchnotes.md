@@ -1,3 +1,6 @@
+v8.5
+- Corrected polish
+
 v8.4
 - Added Spanish support (thanks @erizocosmico)
 
@@ -12,7 +15,6 @@ v8.1
 
 v8.0
 - Updated for v11 support
-
 
 v7.24
 
