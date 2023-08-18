@@ -67,6 +67,10 @@ class GMNote extends FormApplication {
 
         html.find('.moveToNote').click(ev => this._moveToNotes());
         html.find('.moveToDescription').click(ev => this._moveToDescription());
+
+        // Update Title
+        const elem = html[0];
+        elem.closest('.window-app').querySelector('header > .window-title').textContent = game.i18n.format('GMNote.title', { document: this.object.name });
     }
     
     async _updateObject(event, formData) {
@@ -81,38 +85,48 @@ class GMNote extends FormApplication {
         }
     }
 
-    static _initEntityHook(app, html, data) {
-        if (game.user.isGM) {
-            let labelTxt = '';
-            let labelStyle= "";
-            let title = game.i18n.localize('GMNote.label'); 
-            let notes = app.object.getFlag('gm-notes', 'notes');
+    static _attachHeaderButton(app, buttons) {
+        // If user is not GM - don't do anything
+        if (!game.user.isGM) return;
 
-
-            if (game.settings.get('gm-notes', 'hideLabel') === false) {
-                labelTxt = ' ' + title;
+        // If app has document
+        if (!app?.document) return;
+        
+        buttons.unshift({
+            // If hide label is true, don't show label
+            label: game.settings.get('gm-notes', 'hideLabel') ? '' : game.i18n.localize('GMNote.label'),
+            class: 'open-gm-note',
+            get icon() {
+                // Get GM Notes
+                const notes = app.document.getFlag('gm-notes', 'notes');
+                return `fas ${notes ? 'fa-clipboard-check' : 'fas fa-clipboard'}`
+            },
+            onclick: ev => {
+                new GMNote(app.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true)
             }
-            if (game.settings.get('gm-notes', 'colorLabel') === true && notes) {
-                labelStyle = "style='color:green;'";
-            }
+        });
+    }
 
-            let openBtn = $(`<a class="open-gm-note" data-tooltip="${title}" ${labelStyle} ><i class="fas fa-clipboard${notes ? '-check':''}"></i>${labelTxt}</a>`);
-            openBtn.click(ev => {
-                let noteApp = null;
-                for (let key in app.object.apps) {
-                    let obj = app.object.apps[key];
-                    if (obj instanceof GMNote) {
-                        noteApp = obj;
-                        break;
-                    }
-                }
-                if (!noteApp) noteApp = new GMNote(app.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true });
-                noteApp.render(true);
-            });
-            html.closest('.app').find('.open-gm-note').remove();
-            let titleElement = html.closest('.app').find('.window-title');
-            openBtn.insertAfter(titleElement);
-        }
+    static _updateHeaderButton(app, [elem], options) {
+        // Make sure elem is parent
+        elem = elem.closest('.window-app');
+
+        // Check if user is GM
+        if (!game.user.isGM) return;
+
+        // Check if elem has header button
+        if (!elem?.querySelector('.open-gm-note')) return;
+
+        // Get GM Notes Button
+        const gmNotesButton = elem.closest('.window-app').querySelector('.open-gm-note');
+
+        // Get GM Notes
+        const notes = app.document.getFlag('gm-notes', 'notes');
+
+        // Set color to green if notes exist
+        gmNotesButton.style.color = game.settings.get('gm-notes', 'colorLabel') && notes ? 'var(--palette-success, green)' : '';
+        // Change icon to Check
+        gmNotesButton.innerHTML = `<i class="fas ${notes ? 'fa-clipboard-check' : 'fas fa-clipboard'}"></i> ${game.settings.get('gm-notes', 'hideLabel') ? '' : game.i18n.localize('GMNote.label')}`;
     }
     
     async _moveToNotes() {
@@ -218,24 +232,10 @@ Hooks.once('ready', async function() {
     console.info(`gm-notes | Module[gm-notes] ready hook complete`);
 });
 
-Hooks.on('renderActorSheet', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderItemSheet', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderJournalSheet', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderRollTableConfig', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderTileConfig', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderDrawingConfig', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
-});
-Hooks.on('renderAmbientLightConfig', (app, html, data) => {
-    GMNote._initEntityHook(app, html, data);
+// Define Hooks to Montior
+const watchedHooks = ['ActorSheet', 'ItemSheet', 'Application']
+// Loop through hooks and attach header button and listener
+watchedHooks.forEach(hook => {
+    Hooks.on(`get${hook}HeaderButtons`, GMNote._attachHeaderButton);
+    Hooks.on(`render${hook}`, GMNote._updateHeaderButton);
 });
