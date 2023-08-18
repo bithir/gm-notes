@@ -1,5 +1,6 @@
 {
     "GMNote.label":"GM Notes",
+    "GMNote.title":"GM Notes for {document}",
     "GMNote.setting":"Hide GM Note Label",
     "GMNote.settingHint":"If checked only the icon will apear",
     "GMNote.colorSetting":"Change Color when Notes are present",

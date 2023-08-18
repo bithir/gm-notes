@@ -67,6 +67,10 @@ class GMNote extends FormApplication {
 
         html.find('.moveToNote').click(ev => this._moveToNotes());
         html.find('.moveToDescription').click(ev => this._moveToDescription());
+
+        // Update Title
+        const elem = html[0];
+        elem.closest('.window-app').querySelector('header > .window-title').textContent = game.i18n.format('GMNote.title', { document: this.object.name });
     }
     
     async _updateObject(event, formData) {
@@ -92,7 +96,11 @@ class GMNote extends FormApplication {
             // If hide label is true, don't show label
             label: game.settings.get('gm-notes', 'hideLabel') ? '' : game.i18n.localize('GMNote.label'),
             class: 'open-gm-note',
-            icon: 'fas fa-clipboard',
+            get icon() {
+                // Get GM Notes
+                const notes = app.document.getFlag('gm-notes', 'notes');
+                return `fas ${notes ? 'fa-clipboard-check' : 'fas fa-clipboard'}`
+            },
             onclick: ev => {
                 new GMNote(app.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true)
             }
