@@ -1,3 +1,6 @@
+v8.6
+- Internal structural changes to use the hook for app header buttons
+
 v8.5
 - Corrected polish
 
