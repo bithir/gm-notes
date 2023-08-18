@@ -86,6 +86,9 @@ class GMNote extends FormApplication {
     }
 
     static _attachHeaderButton(app, buttons) {
+        // Ignore JournalTextPageSheets
+        if(app instanceof JournalTextPageSheet) return;
+
         // If user is not GM - don't do anything
         if (!game.user.isGM) return;
 
@@ -108,8 +111,13 @@ class GMNote extends FormApplication {
     }
 
     static _updateHeaderButton(app, [elem], options) {
+        // Ignore JournalTextPageSheets
+        if(app instanceof JournalTextPageSheet) return;
+
         // Make sure elem is parent
         elem = elem.closest('.window-app');
+
+
 
         // Check if user is GM
         if (!game.user.isGM) return;
@@ -118,7 +126,7 @@ class GMNote extends FormApplication {
         if (!elem?.querySelector('.open-gm-note')) return;
 
         // Get GM Notes Button
-        const gmNotesButton = elem.closest('.window-app').querySelector('.open-gm-note');
+        const gmNotesButton = elem.querySelector('.open-gm-note');
 
         // Get GM Notes
         const notes = app.document.getFlag('gm-notes', 'notes');
