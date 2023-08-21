@@ -1,8 +1,9 @@
 {
-    "GMNote.label":"Notes du Mj",
-    "GMNote.setting":"Cacher les Notes de MJ",
-    "GMNote.settingHint":"Si vous cochez cette case, seule l'icône apparaîtra",
-    "GMNote.colorSetting":"Change couleur quand contient des Notes de MJ",
-    "GMNote.moveToDescription":"Déplacer les Notes du MJ vers Description",
-    "GMNote.moveToNote":"Déplacer depuis Description vers les Notes du MJ"
+    "GMNote.label": "Notes du Mj",
+    "GMNote.setting": "Cacher les Notes de MJ",
+    "GMNote.settingHint": "Si vous cochez cette case, seule l'icône apparaîtra",
+    "GMNote.colorSetting": "Change couleur quand contient des Notes de MJ",
+    "GMNote.moveToDescription": "Déplacer les Notes du MJ vers Description",
+    "GMNote.moveToNote": "Déplacer depuis Description vers les Notes du MJ",
+    "GMNote.title": "Notes du MJ pour {document}"
 }
