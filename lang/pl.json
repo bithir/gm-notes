@@ -4,5 +4,6 @@
     "GMNote.colorSetting": "Zmienia kolor, gdy obecne są notatki",
     "GMNote.moveToNote": "Przenieś opis do notatek MG",
     "GMNote.setting": "Ukryj etykietę GM Note",
-    "GMNote.moveToDescription": "Przenieś uwagi MG do opisu"
+    "GMNote.moveToDescription": "Przenieś uwagi MG do opisu",
+    "GMNote.title": "Notatki GM dla {document}"
 }
