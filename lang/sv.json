@@ -4,5 +4,6 @@
     "GMNote.moveToDescription": "Flytta SL notering till beskrivning",
     "GMNote.moveToNote": "Flytta beskrivning till SL notering",
     "GMNote.label": "SL Noteringar",
-    "GMNote.settingHint": "Fyll i kryssrutan för att bara visa ikon och ingen text"
+    "GMNote.settingHint": "Fyll i kryssrutan för att bara visa ikon och ingen text",
+    "GMNote.title": "SL notering för {document}"
 }
