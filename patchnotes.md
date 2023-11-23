@@ -1,3 +1,12 @@
+v8.9
+- Updated portguese (brazil)
+
+v8.8
+- Swedish updates
+
+v8.7
+- Updated Polish and French translations
+
 v8.6
 - Internal structural changes to use the hook for app header buttons
 
