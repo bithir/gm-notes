@@ -4,5 +4,6 @@
     "GMNote.colorSetting": "Mude a cor quando as notas estiverem presentes",
     "GMNote.moveToDescription": "Mover GM Notes para Descrição",
     "GMNote.label": "GM Notes",
-    "GMNote.moveToNote": "Mover descrição para GM Notes"
+    "GMNote.moveToNote": "Mover descrição para GM Notes",
+    "GMNote.title": "Notas do GM para {document}"
 }
