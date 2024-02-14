@@ -3,6 +3,10 @@
         {
             "version":1,
             "message":"<h1>Welcome to GM Notes</h1><br />This module allows you to put GM notes on most of the things in Foundry, including actors, lights, journals, items"
-        }
+        },
+        {
+            "version":2,
+            "message":"<h1>GM Notes</h1><br />If you are running d&amp;d 5e v3.0.2 or later, you will need to turn off the label in the configuration for GM note, or update to the latest version, which will do it automatically for you."
+        }        
     ]
 }

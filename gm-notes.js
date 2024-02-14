@@ -1,6 +1,12 @@
 import { sendDevMessage } from './devmessage.js';
 class GMNote extends FormApplication {
 
+    static alwaysHideLabelForSystem = [ 'dnd5e'];
+
+    static get shouldHideLabel() {
+        return  game.settings.get('gm-notes', 'hideLabel') || 
+            GMNote.alwaysHideLabelForSystem.includes(game.system.id);
+    }
     constructor(object, options) {
         super(object, options);
         this.object.apps[this.appId] = this;
@@ -97,7 +103,7 @@ class GMNote extends FormApplication {
         
         buttons.unshift({
             // If hide label is true, don't show label
-            label: game.settings.get('gm-notes', 'hideLabel') ? '' : game.i18n.localize('GMNote.label'),
+            label: GMNote.shouldHideLabel ? '' : game.i18n.localize('GMNote.label'),
             class: 'open-gm-note',
             get icon() {
                 // Get GM Notes
@@ -134,7 +140,7 @@ class GMNote extends FormApplication {
         // Set color to green if notes exist
         gmNotesButton.style.color = game.settings.get('gm-notes', 'colorLabel') && notes ? 'var(--palette-success, green)' : '';
         // Change icon to Check
-        gmNotesButton.innerHTML = `<i class="fas ${notes ? 'fa-clipboard-check' : 'fas fa-clipboard'}"></i> ${game.settings.get('gm-notes', 'hideLabel') ? '' : game.i18n.localize('GMNote.label')}`;
+        gmNotesButton.innerHTML = `<i class="fas ${notes ? 'fa-clipboard-check' : 'fas fa-clipboard'}"></i> ${GMNote.shouldHideLabel ? '' : game.i18n.localize('GMNote.label')}`;
     }
     
     async _moveToNotes() {
@@ -212,8 +218,8 @@ Hooks.once('init', () => {
         name: game.i18n.localize('GMNote.setting'),
         hint: game.i18n.localize('GMNote.settingHint'),
         scope: "world",
-        config: true,
-        default: false,
+        config: game.system.id != "dnd5e",
+        default: game.system.id == "dnd5e",
         type: Boolean
     });
     game.settings.register("gm-notes", 'colorLabel', {
