@@ -103,7 +103,8 @@ class GMNote extends FormApplication {
         
         buttons.unshift({
             // If hide label is true, don't show label
-            label: GMNote.shouldHideLabel ? '' : game.i18n.localize('GMNote.label'),
+            label: game.i18n.localize('GMNote.label'),
+            tooltip: game.i18n.localize('GMNote.label'),
             class: 'open-gm-note',
             get icon() {
                 // Get GM Notes
