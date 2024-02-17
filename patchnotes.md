@@ -1,3 +1,6 @@
+v9.0.1
+- Fixed tooltip
+
 v9.0
 - Removed the ability from having a label for GM notes in the D&D system as it breaks their grid-layout (from version 3.0.2 and upwards)
 
