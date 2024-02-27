@@ -5,5 +5,5 @@
     "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
     "GMNote.moveToDescription": "GM Notizen in die Beschreibung verschieben",
     "GMNote.moveToNote": "Beschreibung in die GM Notizen verschieben",
-    "GMNote.title": ""
+    "GMNote.title": "GM Notizen {document}"
 }
