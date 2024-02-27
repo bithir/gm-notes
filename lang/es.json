@@ -4,5 +4,6 @@
     "GMNote.settingHint": "Al marcarlo solo aparecerá el icono",
     "GMNote.colorSetting": "Cambiar el color cuando hay notas",
     "GMNote.moveToDescription": "Mover notas de DJ a descripción",
-    "GMNote.moveToNote": "Mover descripción a notas de DJ"
+    "GMNote.moveToNote": "Mover descripción a notas de DJ",
+    "GMNote.title": ""
 }
