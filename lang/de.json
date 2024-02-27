@@ -1,8 +1,9 @@
 {
-    "GMNote.label":"GM Notizen",
-    "GMNote.setting":"Beschriftung verbergen",
-    "GMNote.settingHint":"Wenn eingeschaltet wird nur das Icon anzeigen",
-    "GMNote.colorSetting":"Ändere die Iconfarbe wenn Notitzen existieren",
-    "GMNote.moveToDescription":"GM Notizen in die Beschreibung verschieben",
-    "GMNote.moveToNote":"Beschreibung in die GM Notizen verschieben"
+    "GMNote.label": "GM Notizen",
+    "GMNote.setting": "Beschriftung verbergen",
+    "GMNote.settingHint": "Wenn eingeschaltet wird nur das Icon anzeigen",
+    "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
+    "GMNote.moveToDescription": "GM Notizen in die Beschreibung verschieben",
+    "GMNote.moveToNote": "Beschreibung in die GM Notizen verschieben",
+    "GMNote.title": ""
 }
