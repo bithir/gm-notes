@@ -1,3 +1,8 @@
+v9.1
+
+- Multiple languages fixes - most of them guess work from me
+- Italian translation repaired, but using English texts.
+
 v9.0.1
 - Fixed tooltip
 
