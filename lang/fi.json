@@ -4,5 +4,6 @@
     "GMNote.settingHint": "Jos valittu, vain kuvake näytetään",
     "GMNote.colorSetting": "Vaihda väriä, kun tekstissä on muistiinpanoja",
     "GMNote.moveToDescription": "Siirrä PJ:n muistiinpanot kuvaukseen",
-    "GMNote.moveToNote": "Siirrä kuvaus PJ:n muistiinpanoihin"
+    "GMNote.moveToNote": "Siirrä kuvaus PJ:n muistiinpanoihin",
+    "GMNote.title": ""
 }
