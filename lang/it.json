@@ -1,9 +1,9 @@
 {
-    "GMNote.title": "",
-    "GMNote.label": "",
-    "GMNote.settingHint": "",
-    "GMNote.setting": "",
-    "GMNote.colorSetting": "",
-    "GMNote.moveToDescription": "",
-    "GMNote.moveToNote": ""
+    "GMNote.title": "GM Notes for {document}",
+    "GMNote.label": "GM Notes",
+    "GMNote.settingHint": "If checked only the icon will apear",
+    "GMNote.setting": "Hide GM Note Label",
+    "GMNote.colorSetting": "Change Color when Notes are present",
+    "GMNote.moveToDescription": "Move GM Notes to Description",
+    "GMNote.moveToNote": "Move Description to GM Notes"
 }
