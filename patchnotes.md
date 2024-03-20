@@ -1,3 +1,7 @@
+v9.2
+
+- Fix for [bithir/gm-notes#37](https://github.com/bithir/gm-notes/issues/37)
+
 v9.1
 
 - Multiple languages fixes - most of them guess work from me

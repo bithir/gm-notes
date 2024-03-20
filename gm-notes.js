@@ -99,7 +99,7 @@ class GMNote extends FormApplication {
         if (!game.user.isGM) return;
 
         // If app has document
-        if (!app?.document) return;
+        if (!(app.document instanceof foundry.abstract.Document)) return;
         
         buttons.unshift({
             // If hide label is true, don't show label
@@ -119,7 +119,7 @@ class GMNote extends FormApplication {
 
     static _updateHeaderButton(app, [elem], options) {
         // Ignore JournalTextPageSheets
-        if(app instanceof JournalTextPageSheet) return;
+        if(app instanceof JournalTextPageSheet || !(app.document instanceof foundry.abstract.Document)) return;
 
         // Make sure elem is parent
         elem = elem.closest('.window-app');
