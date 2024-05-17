@@ -1,3 +1,7 @@
+v9.3
+
+- Updated compatibility version for Foundry VTT v12
+
 v9.2
 
 - Fix for [bithir/gm-notes#37](https://github.com/bithir/gm-notes/issues/37)
