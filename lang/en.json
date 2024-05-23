@@ -5,5 +5,9 @@
     "GMNote.settingHint":"If checked only the icon will apear",
     "GMNote.colorSetting":"Change Color when Notes are present",
     "GMNote.moveToDescription":"Move GM Notes to Description",
-    "GMNote.moveToNote":"Move Description to GM Notes"
+    "GMNote.moveToNote":"Move Description to GM Notes",
+
+    "GMNote.hotKeyName":"Show GM Notes",
+    "GMNote.hotKeyHint":"This will open GM Notes for the current active window"
+    
 }
