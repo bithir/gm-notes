@@ -1,3 +1,7 @@
+v9.4
+
+- Added API access as well as a keyboard shortcut for opening GM Notes for an active window/selected token (prio is for active window)
+
 v9.3
 
 - Updated compatibility version for Foundry VTT v12

@@ -7,11 +7,28 @@ class GMNote extends FormApplication {
 	}
 
 	static showGMNoteWindow() {
+
+        // Selection priority
+        // Active window
+        // If no active window, we instead select the controlled item on the canvas, if such exist
+        // if the controlled item on the canvas is a TokenDocument, we get the Actor from that
+
 		const win = ui.activeWindow;        
+        let gmNoteObject = win?.object;
 		if (!win || win._state != Application.RENDER_STATES.RENDERED || !win.object) {
-			return;
+            const objs = canvas[ui.controls.control.layer].controlled;
+            console.log(objs);
+			if( !objs || objs.length == 0) {
+                return;
+            }
+            if(objs[0].document instanceof TokenDocument) {
+                gmNoteObject = objs[0].document.actor;
+            } else {
+                gmNoteObject = objs[0].document;
+            }
 		}
-		new gmnote.GMNote(ui.activeWindow.object, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
+        console.log(gmNoteObject);
+		new gmnote.GMNote(gmNoteObject, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
 	}
 
 	constructor(object, options) {
@@ -79,7 +96,7 @@ class GMNote extends FormApplication {
 
 		// Update Title
 		const elem = html[0];
-		elem.closest(".window-app").querySelector("header > .window-title").textContent = game.i18n.format("GMNote.title", { document: this.object.name });
+		elem.closest(".window-app").querySelector("header > .window-title").textContent = game.i18n.format("GMNote.title", { document: this.object.name ?? `${this.object.documentName}[${this.object.id}]`});
 	}
 
 	async _updateObject(event, formData) {
@@ -123,6 +140,8 @@ class GMNote extends FormApplication {
 	static _updateHeaderButton(app, [elem], options) {
 		// Ignore JournalTextPageSheets
 		if (app instanceof JournalTextPageSheet || !(app.document instanceof foundry.abstract.Document)) return;
+
+        console.log(app, [elem], options);
 
 		// Make sure elem is parent
 		elem = elem.closest(".window-app");

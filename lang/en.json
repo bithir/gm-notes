@@ -8,6 +8,6 @@
     "GMNote.moveToNote":"Move Description to GM Notes",
 
     "GMNote.hotKeyName":"Show GM Notes",
-    "GMNote.hotKeyHint":"This will open GM Notes for the current active window"
+    "GMNote.hotKeyHint":"This will open GM Notes for the current active window or selected canvas object"
     
 }
