@@ -7,5 +7,5 @@
     "GMNote.moveToDescription": "Przenieś uwagi MG do opisu",
     "GMNote.title": "Notatki GM dla {document}",
     "GMNote.hotKeyName": "Pokaż notatki MG",
-    "GMNote.hotKeyHint": "Spowoduje to otwarcie Notatek MG dla bieżącego aktywnego okna"
+    "GMNote.hotKeyHint": "Spowoduje to otwarcie Notatek MG dla bieżącego aktywnego okna lub wybranego obiektu płótna"
 }
