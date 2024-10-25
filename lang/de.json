@@ -3,7 +3,15 @@
     "GMNote.setting": "Beschriftung verbergen",
     "GMNote.settingHint": "Wenn eingeschaltet wird nur das Icon anzeigen",
     "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
-    "GMNote.moveToDescription": "GM Notizen in die Beschreibung verschieben",
-    "GMNote.moveToNote": "Beschreibung in die GM Notizen verschieben",
-    "GMNote.title": "GM Notizen {document}"
+    "GMNote.moveToDescription": "Ausgewählte GM Notizen in die Beschreibung verschieben",
+    "GMNote.moveToNote": "Ausgewählte Beschreibung in die GM Notizen verschieben",
+    "GMNote.title": "GM Notizen {document}",
+    "GMNote.noSelection": "Kein Text zum Verschieben ausgewählt",
+    "GMNote.copiedToNotes": "Der ausgewählte Text stammt nicht von der aktuellen Seite. Stattdessen in GM-Notizen kopiert",
+    "GMNote.notFromNotes": "Der ausgewählte Text stammt nicht aus den aktuellen GM-Notizen",
+    "GMNote.formattingIssuesDescription": "Der ausgewählte Text wurde auf der aktuellen Seite nicht gefunden (wahrscheinlich Formatierungsprobleme). Stattdessen in GM-Notizen kopiert",
+    "GMNote.formattingIssuesNotes": "Der ausgewählte Text wurde in den aktuellen GM-Notizen nicht gefunden (wahrscheinlich Formatierungsprobleme). Stattdessen in die Beschreibung kopiert",
+    "GMNote.migrationCompleted": "Migration der GM-Notizen zur ersten Seite jedes Journals abgeschlossen.",
+    "GMNote.migrateButton": "GM-Notizen migrieren",
+    "GMNote.migrateButtonHint": "Klicken Sie auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren."
 }

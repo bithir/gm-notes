@@ -3,7 +3,15 @@
     "GMNote.setting": "Ocultar etiqueta de nota de DJ",
     "GMNote.settingHint": "Al marcarlo solo aparecerá el icono",
     "GMNote.colorSetting": "Cambiar el color cuando hay notas",
-    "GMNote.moveToDescription": "Mover notas de DJ a descripción",
-    "GMNote.moveToNote": "Mover descripción a notas de DJ",
-    "GMNote.title": "Notas de DJ {document}"
+    "GMNote.moveToDescription": "Mover notas de DJ seleccionadas a descripción",
+    "GMNote.moveToNote": "Mover descripción seleccionada a notas de DJ",
+    "GMNote.title": "Notas de DJ {document}",
+    "GMNote.noSelection": "No se ha seleccionado texto para mover",
+    "GMNote.copiedToNotes": "El texto seleccionado no es de la página actual. Copiando a las notas del DJ en su lugar",
+    "GMNote.notFromNotes": "El texto seleccionado no es de las notas actuales del DJ",
+    "GMNote.formattingIssuesDescription": "El texto seleccionado no se encontró en la página actual (probablemente problemas de formato). Copiado a las notas del DJ en su lugar",
+    "GMNote.formattingIssuesNotes": "El texto seleccionado no se encontró en las notas actuales del DJ (probablemente problemas de formato). Copiado a la descripción en su lugar",
+    "GMNote.migrationCompleted": "Migración de notas del DJ a la primera página de cada diario completada.",
+    "GMNote.migrateButton": "Migrar Notas del DJ",
+    "GMNote.migrateButtonHint": "Haga clic en el botón de arriba para migrar las notas del DJ de las entradas del diario a la primera página de cada diario."
 }
