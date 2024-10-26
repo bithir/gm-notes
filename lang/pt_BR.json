@@ -2,8 +2,16 @@
     "GMNote.setting": "Ocultar Etiqueta de Nota do GM",
     "GMNote.settingHint": "Se marcado apenas o ícone irá aparecer",
     "GMNote.colorSetting": "Mude a cor quando as notas estiverem presentes",
-    "GMNote.moveToDescription": "Mover GM Notes para Descrição",
+    "GMNote.moveToDescription": "Mover GM Notes selecionadas para Descrição",
     "GMNote.label": "GM Notes",
-    "GMNote.moveToNote": "Mover descrição para GM Notes",
-    "GMNote.title": "Notas do GM para {document}"
+    "GMNote.moveToNote": "Mover descrição selecionada para GM Notes",
+    "GMNote.title": "Notas do GM para {document}",
+    "GMNote.noSelection": "Nenhum texto selecionado para mover",
+    "GMNote.copiedToNotes": "O texto selecionado não é da página atual. Copiando para as notas do GM em vez disso",
+    "GMNote.notFromNotes": "O texto selecionado não é das notas atuais do GM",
+    "GMNote.formattingIssuesDescription": "O texto selecionado não foi encontrado na página atual (provavelmente problemas de formatação). Copiado para as notas do GM em vez disso",
+    "GMNote.formattingIssuesNotes": "O texto selecionado não foi encontrado nas notas atuais do GM (provavelmente problemas de formatação). Copiado para a descrição em vez disso",
+    "GMNote.migrationCompleted": "Migração das notas do GM para a primeira página de cada diário concluída.",
+    "GMNote.migrateButton": "Migrar Notas do GM",
+    "GMNote.migrateButtonHint": "Clique no botão acima para migrar as notas do GM das entradas do diário para a primeira página de cada diário."
 }

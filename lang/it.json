@@ -4,6 +4,14 @@
     "GMNote.settingHint": "If checked only the icon will apear",
     "GMNote.setting": "Hide GM Note Label",
     "GMNote.colorSetting": "Change Color when Notes are present",
-    "GMNote.moveToDescription": "Move GM Notes to Description",
-    "GMNote.moveToNote": "Move Description to GM Notes"
+    "GMNote.moveToDescription": "Move Selected GM Notes to Description",
+    "GMNote.moveToNote": "Move Selected Description to GM Notes",
+    "GMNote.noSelection": "Nessun testo selezionato da spostare",
+    "GMNote.copiedToNotes": "Il testo selezionato non è dalla pagina corrente. Copiato nelle note GM invece",
+    "GMNote.notFromNotes": "Il testo selezionato non è dalle note GM correnti",
+    "GMNote.formattingIssuesDescription": "Il testo selezionato non è stato trovato nella pagina corrente (probabilmente problemi di formattazione). Copiato nelle note GM invece",
+    "GMNote.formattingIssuesNotes": "Il testo selezionato non è stato trovato nelle note GM correnti (probabilmente problemi di formattazione). Copiato nella descrizione invece",
+    "GMNote.migrationCompleted": "Migrazione delle note GM alla prima pagina di ogni diario completata.",
+    "GMNote.migrateButton": "Migra Note GM",
+    "GMNote.migrateButtonHint": "Clicca il pulsante sopra per migrare le note GM dalle voci di diario alla prima pagina di ogni diario."
 }

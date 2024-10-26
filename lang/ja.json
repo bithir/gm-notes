@@ -2,8 +2,16 @@
     "GMNote.label": "GMノート",
     "GMNote.setting": "GMノートにラベルをすべて表示する",
     "GMNote.settingHint": "チェックするとアイコンだけが表示されます",
-    "GMNote.moveToDescription": "GMノートを詳細に置く",
-    "GMNote.moveToNote": "詳細をGMノートに置く",
+    "GMNote.moveToDescription": "選択したGMノートを詳細に移動",
+    "GMNote.moveToNote": "選択した詳細をGMノートに移動",
     "GMNote.colorSetting": "",
-    "GMNote.title": ""
+    "GMNote.title": "",
+    "GMNote.noSelection": "移動するテキストが選択されていません",
+    "GMNote.copiedToNotes": "選択されたテキストは現在のページのものではありません。代わりにGMノートにコピーされました",
+    "GMNote.notFromNotes": "選択されたテキストは現在のGMノートのものではありません",
+    "GMNote.formattingIssuesDescription": "選択されたテキストが現在のページで見つかりませんでした（フォーマットの問題の可能性）。代わりにGMノートにコピーされました",
+    "GMNote.formattingIssuesNotes": "選択されたテキストが現在のGMノートで見つかりませんでした（フォーマットの問題の可能性）。代わりに説明にコピーされました",
+    "GMNote.migrationCompleted": "各ジャーナルの最初のページへのGMノートの移行が完了しました。",
+    "GMNote.migrateButton": "GMノートを移行",
+    "GMNote.migrateButtonHint": "上のボタンをクリックして、ジャーナルエントリからGMノートを各ジャーナルの最初のページに移行します。"
 }

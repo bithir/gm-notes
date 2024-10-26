@@ -3,7 +3,15 @@
     "GMNote.setting": "Cacher les Notes de MJ",
     "GMNote.settingHint": "Si vous cochez cette case, seule l'icône apparaîtra",
     "GMNote.colorSetting": "Change couleur quand contient des Notes de MJ",
-    "GMNote.moveToDescription": "Déplacer les Notes du MJ vers Description",
-    "GMNote.moveToNote": "Déplacer depuis Description vers les Notes du MJ",
-    "GMNote.title": "Notes du MJ pour {document}"
+    "GMNote.moveToDescription": "Déplacer les Notes du MJ sélectionnées vers Description",
+    "GMNote.moveToNote": "Déplacer la Description sélectionnée vers les Notes du MJ",
+    "GMNote.title": "Notes du MJ pour {document}",
+    "GMNote.noSelection": "Aucun texte sélectionné à déplacer",
+    "GMNote.copiedToNotes": "Le texte sélectionné n'est pas de la page courante. Copié dans les notes du MJ à la place",
+    "GMNote.notFromNotes": "Le texte sélectionné n'est pas des notes du MJ actuelles",
+    "GMNote.formattingIssuesDescription": "Le texte sélectionné n'a pas été trouvé dans la page courante (probablement des problèmes de formatage). Copié dans les notes du MJ à la place",
+    "GMNote.formattingIssuesNotes": "Le texte sélectionné n'a pas été trouvé dans les notes du MJ actuelles (probablement des problèmes de formatage). Copié dans la description à la place",
+    "GMNote.migrationCompleted": "Migration des notes du MJ vers la première page de chaque journal terminée.",
+    "GMNote.migrateButton": "Migrer les Notes du MJ",
+    "GMNote.migrateButtonHint": "Cliquez sur le bouton ci-dessus pour migrer les notes du MJ des entrées de journal vers la première page de chaque journal."
 }

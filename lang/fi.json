@@ -3,7 +3,15 @@
     "GMNote.setting": "Piilota PJ:n muistiinpanojen nimiö",
     "GMNote.settingHint": "Jos valittu, vain kuvake näytetään",
     "GMNote.colorSetting": "Vaihda väriä, kun tekstissä on muistiinpanoja",
-    "GMNote.moveToDescription": "Siirrä PJ:n muistiinpanot kuvaukseen",
-    "GMNote.moveToNote": "Siirrä kuvaus PJ:n muistiinpanoihin",
-    "GMNote.title": "PJ:n muistiinpanot {document}"
+    "GMNote.moveToDescription": "Siirrä valitut PJ:n muistiinpanot kuvaukseen",
+    "GMNote.moveToNote": "Siirrä valittu kuvaus PJ:n muistiinpanoihin",
+    "GMNote.title": "PJ:n muistiinpanot {document}",
+    "GMNote.noSelection": "Ei valittua tekstiä siirrettäväksi",
+    "GMNote.copiedToNotes": "Valittu teksti ei ole nykyiseltä sivulta. Kopioidaan sen sijaan PJ:n muistiinpanoihin",
+    "GMNote.notFromNotes": "Valittu teksti ei ole nykyisistä PJ:n muistiinpanoista",
+    "GMNote.formattingIssuesDescription": "Valittua tekstiä ei löytynyt nykyiseltä sivulta (todennäköisesti muotoiluongelmia). Kopioidaan sen sijaan PJ:n muistiinpanoihin",
+    "GMNote.formattingIssuesNotes": "Valittua tekstiä ei löytynyt nykyisistä PJ:n muistiinpanoista (todennäköisesti muotoiluongelmia). Kopioidaan sen sijaan kuvaukseen",
+    "GMNote.migrationCompleted": "PJ:n muistiinpanojen siirto kunkin päiväkirjan ensimmäiselle sivulle valmis.",
+    "GMNote.migrateButton": "Siirrä PJ:n muistiinpanot",
+    "GMNote.migrateButtonHint": "Napsauta yllä olevaa painiketta siirtääksesi PJ:n muistiinpanot päiväkirjamerkinnöistä kunkin päiväkirjan ensimmäiselle sivulle."
 }

@@ -1,9 +1,17 @@
 {
     "GMNote.setting": "Göm texten för SL Notering",
     "GMNote.colorSetting": "Ändra färg på ikonen när det finns en SL notering",
-    "GMNote.moveToDescription": "Flytta SL notering till beskrivning",
-    "GMNote.moveToNote": "Flytta beskrivning till SL notering",
+    "GMNote.moveToDescription": "Flytta markerad SL notering till beskrivning",
+    "GMNote.moveToNote": "Flytta markerad beskrivning till SL notering",
     "GMNote.label": "SL Noteringar",
     "GMNote.settingHint": "Fyll i kryssrutan för att bara visa ikon och ingen text",
-    "GMNote.title": "SL notering för {document}"
+    "GMNote.title": "SL notering för {document}",
+    "GMNote.noSelection": "Ingen text markerad att flytta",
+    "GMNote.copiedToNotes": "Markerad text är inte från den aktuella sidan. Kopierar till SL noteringar istället",
+    "GMNote.notFromNotes": "Markerad text är inte från de aktuella SL noteringarna",
+    "GMNote.formattingIssuesDescription": "Markerad text hittades inte på den aktuella sidan (troligen formateringsproblem). Kopierad till SL noteringar istället",
+    "GMNote.formattingIssuesNotes": "Markerad text hittades inte i de aktuella SL noteringarna (troligen formateringsproblem). Kopierad till beskrivningen istället",
+    "GMNote.migrationCompleted": "Migrering av SL noteringar till första sidan av varje journal slutförd.",
+    "GMNote.migrateButton": "Migrera SL Noteringar",
+    "GMNote.migrateButtonHint": "Klicka på knappen ovan för att migrera SL noteringar från journalanteckningar till första sidan av varje journal."
 }

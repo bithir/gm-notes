@@ -5,6 +5,10 @@
     height:90%;
 }
 
+.gm-notes .editor .editor-content {
+    user-select: text;
+}
+
 .gm-notes button {
     height: 34px;
     width: 48%;
