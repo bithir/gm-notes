@@ -13,7 +13,7 @@ This module is system independent, but has an additional feature to easily move 
 ## Contribution
 A massive thanks to the original author Felix Müller (syl3r86 - Paypal: felix.mueller.86@web.de)
 
-A thank to @JustAnotherIdea for per-page Journal Entry.
+A thank to @JustAnotherIdea for per-page Journal Entry support.
 
 ### Translations
 This project exists on weblate - see https://weblate.foundryvtt-hub.com/projects/gm-notes/
