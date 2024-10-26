@@ -1,3 +1,11 @@
+v10.0
+
+- Rework for journal handling allowing per-page notes and integration with Monks Enhanced Journal.  Some minor fixes for selection of text.  Big thanks to @JustAnotherIdea.  Remember to go to configuration and hit "migrate" to migrate over existing journals.
+
+v9.5
+
+- Polish entries
+
 v9.4
 
 - Added API access as well as a keyboard shortcut for opening GM Notes for an active window/selected token (prio is for active window)
