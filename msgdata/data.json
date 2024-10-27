@@ -6,7 +6,7 @@
         },
         {
             "version":3,
-            "message":"<h1>GM Notes</h1><br />New release with rework for journal handling allowing per-page notes and integration with Monks Enhanced Journal.  Some minor fixes for selection of text.  Big thanks to @JustAnotherIdea.  Remember to go to configuration and hit 'migrate' to migrate over existing journals."
+            "message":"<h1>GM Notes</h1><br />A new release is now available. The new release contains rework for journal handling allowing per-page notes and integration with Monks Enhanced Journal.  Some minor fixes for selection of text.  Big thanks to @JustAnotherIdea.  When you are on 10.0 of GM Notes remember to go to configuration and hit 'migrate' to migrate over existing journals."
         }        
     ]
 }
