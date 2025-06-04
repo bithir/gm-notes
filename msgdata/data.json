@@ -5,10 +5,6 @@
             "message":"<h1>Welcome to GM Notes</h1><br />This module allows you to put GM notes on most of the things in Foundry, including actors, lights, journals, items"
         },
         {
-            "version":3,
-            "message":"<h1>GM Notes</h1><br />The release 10.0 is now available. The new release contains rework for journal handling allowing per-page notes and integration with Monks Enhanced Journal.  Some minor fixes for selection of text.  Big thanks to @JustAnotherIdea.  <b>When<b> you are on 10.0 of GM Notes remember to go to configuration and hit '<i>migrate</i>' to migrate over existing journals."
-        },
-        {
             "version":4,
             "message":"<h1>GM Notes</h1><br />The release 10.1 is now available. The new release supports Foundry VTT v13 <br><b>Note:</b> that the system will not correctly work with AppV2/ActorV2 applications yet"
         }        
