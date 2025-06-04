@@ -1,3 +1,6 @@
+v10.2
+- Updated for Tidy5e Sheet (thanks to @Elfrey)
+
 v10.1
 - Enabled the module for Foundry VTT v13
 - Note: that the system will not correctly work with AppV2/ActorV2 applications yet
