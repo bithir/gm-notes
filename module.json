@@ -19,8 +19,8 @@
     "compatibleCoreVersion": 10,
     "compatibility": {
         "minimum": 10,
-        "verified": 12,
-        "maximum": 12
+        "verified": 13,
+        "maximum": 13
     },
     "esmodules": [
         "./gm-notes.js"
