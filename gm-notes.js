@@ -212,7 +212,6 @@ class GMNote extends FormApplication {
 		// Ignore non-document apps
 		if (!((app.document instanceof foundry.abstract.Document) || (app.constructor.name === "EnhancedJournal"))) return;
 
-        // console.log(app, [elem], options);
 
 		// Make sure elem is parent
 		elem = elem.closest(".window-app");
@@ -263,6 +262,26 @@ class GMNote extends FormApplication {
 				GMNote.shouldHideLabel ? "" : game.i18n.localize("GMNote.label")
 			}`;
 		}, delay);
+	}
+
+	static _updateHeaderButtonV2(app, elem) {
+		let gmNotesButton = elem?.querySelector(".open-gm-note");
+		let notes = "";
+		// Get GM Notes
+		if (app.constructor.name === "EnhancedJournal") {
+			let notesID = app.subsheet.pagesInView[0]?.dataset?.pageId;
+			notes = app.object.pages.get(notesID).getFlag("gm-notes", "notes");
+		} else if (app.document.constructor.name === "JournalEntry") {
+			const currentPageId = app.object._sheet.pagesInView[0]?.dataset?.pageId;
+			const page = app.object.pages.get(currentPageId);
+			notes = page ? page.getFlag("gm-notes", "notes") : "";
+		} else {
+			notes = app.document.getFlag("gm-notes", "notes");
+		}
+
+		gmNotesButton.style.color = game.settings.get("gm-notes", "colorLabel") && notes ? "var(--palette-success, green)" : "";
+		// Change icon to Check
+		gmNotesButton.className = `open-gm-note fas ${notes ? "fa-clipboard-check" : "fa-clipboard"}`;
 	}
 
 	async _moveToNotes() {
@@ -537,6 +556,23 @@ watchedHooks.forEach(hook => {
     Hooks.on(`get${hook}HeaderButtons`, GMNote._attachHeaderButton);
     Hooks.on(`render${hook}`, GMNote._updateHeaderButton);
 });
+
+// Register the GM Note sheet for Tidy5e Sheet
+Hooks.once('tidy5e-sheet.ready', (api) => {
+	api.registerItemHeaderControls?.({
+		controls: [
+			{
+				icon: 'fas fa-clipboard',
+				label: game.i18n.localize("GMNote.label"),
+				async onClickAction() {
+					new GMNote(this.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
+				}
+			}]
+	})
+});
+
+// Update header button for ItemSheetV2
+Hooks.on('renderItemSheetV2', GMNote._updateHeaderButtonV2);
 
 // Add GM notes to journal pages on render
 Hooks.on('renderJournalPageSheet', GMNote._addContentToJournal)
