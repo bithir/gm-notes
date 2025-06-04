@@ -1,3 +1,7 @@
+v10.1
+- Enabled the module for Foundry VTT v13
+- Note: that the system will not correctly work with AppV2/ActorV2 applications yet
+
 v10.0
 
 - Rework for journal handling allowing per-page notes and integration with Monks Enhanced Journal.  Some minor fixes for selection of text.  Big thanks to @JustAnotherIdea.  Remember to go to configuration and hit "migrate" to migrate over existing journals.
