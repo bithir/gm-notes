@@ -162,6 +162,17 @@ class GMNote extends FormApplication {
 		// If user is not GM - don't do anything
 		if (!game.user.isGM) return;
 		
+		const activateGMNote = (ev) =>
+		{				
+				if (app.constructor.name === "EnhancedJournal") {
+					new GMNote(app.document.pages.get(app.subsheet.pagesInView[0]?.dataset?.pageId), { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
+				} else if (app.document.constructor.name === "JournalEntry") {
+					const page = app.document.pages.get(app.document._sheet.pagesInView[0]?.dataset?.pageId);
+					new GMNote(page, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
+				} else {
+					new GMNote(app.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
+				}
+		};		
 		
 		const gmNoteButton = {
 			// If hide label is true, don't show label
@@ -182,17 +193,9 @@ class GMNote extends FormApplication {
 				}
 				return `fas ${notes ? "fa-clipboard-check" : "fas fa-clipboard"}`;
 			},
-			onclick: (ev) => {
-				if (app.constructor.name === "EnhancedJournal") {
-					new GMNote(app.object.pages.get(app.subsheet.pagesInView[0]?.dataset?.pageId), { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
-				} else if (app.document.constructor.name === "JournalEntry") {
-					const page = app.object.pages.get(app.object._sheet.pagesInView[0]?.dataset?.pageId);
-					new GMNote(page, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
-				} else {
-					new GMNote(app.document, { submitOnClose: true, closeOnSubmit: false, submitOnUnfocus: true }).render(true);
-				}
-			},
-		};
+			onClick: (ev) => activateGMNote(ev),
+			onclick: (ev) => activateGMNote(ev)
+		}
 		
 		if (app.constructor.name === "EnhancedJournal") {
 			// Long delay to ensure the page is fully loaded, and different method to attach button
@@ -518,7 +521,7 @@ Hooks.on('renderSettingsConfig', (app, html, data) => {
     });
 
     // Find the setting and replace its content with the button
-    const setting = html.find('div.form-group:has([name="gm-notes.migrateNotes"])');
+    const setting = $(html).find('div.form-group:has([name="gm-notes.migrateNotes"])');
     setting.find('input').remove(); // Remove the checkbox
     setting.find('label').after(button); // Add the button after the label
 });
@@ -536,6 +539,12 @@ const watchedHooks = ['ActorSheet', 'ItemSheet', 'Application']
 watchedHooks.forEach(hook => {
     Hooks.on(`get${hook}HeaderButtons`, GMNote._attachHeaderButton);
     Hooks.on(`render${hook}`, GMNote._updateHeaderButton);
+});
+
+const watchedHooksV2 = ['ActorSheetV2','AmbientLightConfig','DrawingConfig','WallConfig','TileConfig','JournalEntrySheet'];
+//getHeaderControlsAmbientLightConfig
+watchedHooksV2.forEach(hook => {
+	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
 });
 
 // Add GM notes to journal pages on render

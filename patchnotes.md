@@ -1,4 +1,9 @@
 v10.1
+- Fixed various v13 issues, incluging AppV2/ActorV2 applications and more
+- In AppV2, the GM Note button will not change icon nor the colour as it did in AppV1, nor will it have a tooltip
+- 
+
+v10.1
 - Enabled the module for Foundry VTT v13
 - Note: that the system will not correctly work with AppV2/ActorV2 applications yet
 

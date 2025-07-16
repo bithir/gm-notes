@@ -15,10 +15,10 @@
             "comment": "Original Author"
         }
     ],
-    "minimumCoreVersion": 10,
-    "compatibleCoreVersion": 10,
+    "minimumCoreVersion": 13,
+    "compatibleCoreVersion": 13,
     "compatibility": {
-        "minimum": 10,
+        "minimum": 13,
         "verified": 13,
         "maximum": 13
     },
