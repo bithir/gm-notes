@@ -65,7 +65,7 @@ class GMNote extends FormApplication {
 	async getData() {
 		const data = super.getData();
 
-		data.journalNotes = await TextEditor.enrichHTML(this.object.getFlag("gm-notes", "notes"), { async: true });
+		data.journalNotes = await foundry.applications.ux.TextEditor.enrichHTML(this.object.getFlag("gm-notes", "notes"), { async: true });
 		data.flags = this.object.flags;
 		data.owner = game.user.id;
 		data.isGM = game.user.isGM;
@@ -298,8 +298,8 @@ class GMNote extends FormApplication {
 					descPath = "system.description.value";
 					break;
 			}
-			let description = getProperty(this.object, descPath);
-			let notes = getProperty(this.object, "flags.gm-notes.notes");
+			let description = foundry.utils.getProperty(this.object, descPath);
+			let notes = foundry.utils.getProperty(this.object, "flags.gm-notes.notes");
 
 			if (notes === undefined) notes = "";
 			if (description === undefined) description = "";
@@ -361,7 +361,7 @@ class GMNote extends FormApplication {
 			}
 
 			let page = this.object;
-			let description = getProperty(page, "text.content") ?? "";
+			let description = foundry.utils.getProperty(page, "text.content") ?? "";
 			let notes = page.getFlag("gm-notes", "notes") ?? "";
 			
 			// Update the GM notes with the selected HTML
@@ -394,7 +394,7 @@ class GMNote extends FormApplication {
 					descPath = "system.description.value";
 					break;
 			}
-			let description = getProperty(this.object, descPath);
+			let description = foundry.utils.getProperty(this.object, descPath);
 			let notes = this.object.getFlag("gm-notes", "notes");
 
 			if (notes === undefined) notes = "";
@@ -436,7 +436,7 @@ class GMNote extends FormApplication {
 			range.deleteContents();
 			
 			let page = this.object;
-			let description = getProperty(page, "text.content") ?? "";
+			let description = foundry.utils.getProperty(page, "text.content") ?? "";
 			let notes = page.getFlag("gm-notes", "notes") ?? "";
 
 			// Update the description with the selected HTML
