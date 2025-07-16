@@ -575,7 +575,7 @@ Hooks.once('tidy5e-sheet.ready', (api) => {
 });
 
 
-const watchedHooksV2 = ['ActorSheetV2','ItemSheetV2','AmbientLightConfig','DrawingConfig','WallConfig','TileConfig','JournalEntrySheet'];
+const watchedHooksV2 = ['ActorSheetV2','ItemSheetV2','AmbientLightConfig','DrawingConfig','WallConfig','TileConfig','JournalEntrySheet','RollTableSheet'];
 //getHeaderControlsAmbientLightConfig
 watchedHooksV2.forEach(hook => {
 	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
