@@ -1,3 +1,6 @@
+10.4
+- Added GMNote support to rolltables in v13
+
 10.3
 - Fixed various v13 issues, incluging AppV2/ActorV2 applications and more
 - In AppV2, the GM Note button will not change icon nor the colour as it did in AppV1, nor will it have a tooltip
