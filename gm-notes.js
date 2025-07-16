@@ -574,13 +574,12 @@ Hooks.once('tidy5e-sheet.ready', (api) => {
 	})
 });
 
-// Update header button for ItemSheetV2
-Hooks.on('renderItemSheetV2', GMNote._updateHeaderButtonV2);
 
-const watchedHooksV2 = ['ActorSheetV2','AmbientLightConfig','DrawingConfig','WallConfig','TileConfig','JournalEntrySheet'];
+const watchedHooksV2 = ['ActorSheetV2','ItemSheetV2','AmbientLightConfig','DrawingConfig','WallConfig','TileConfig','JournalEntrySheet'];
 //getHeaderControlsAmbientLightConfig
 watchedHooksV2.forEach(hook => {
 	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
+	// Do not believe this works on ItemSheetV2 - it for sure do not work on all TileConfig Hooks.on(`render${hook}`, GMNote._updateHeaderButtonV2);
 });
 
 // Add GM notes to journal pages on render
