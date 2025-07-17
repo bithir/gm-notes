@@ -3,6 +3,8 @@
     "GMNote.setting": "Ocultar etiqueta de nota de DJ",
     "GMNote.settingHint": "Al marcarlo solo aparecerá el icono",
     "GMNote.colorSetting": "Cambiar el color cuando hay notas",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Mover notas de DJ seleccionadas a descripción",
     "GMNote.moveToNote": "Mover descripción seleccionada a notas de DJ",
     "GMNote.title": "Notas de DJ {document}",

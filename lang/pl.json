@@ -2,6 +2,8 @@
     "GMNote.label": "Notatki MG",
     "GMNote.settingHint": "Jeśli zaznaczone, pojawi się tylko ikona",
     "GMNote.colorSetting": "Zmienia kolor, gdy obecne są notatki",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToNote": "Przenieś wybrany opis do notatek MG",
     "GMNote.setting": "Ukryj etykietę GM Note",
     "GMNote.moveToDescription": "Przenieś wybrane uwagi MG do opisu",

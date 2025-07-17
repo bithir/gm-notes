@@ -3,6 +3,8 @@
     "GMNote.setting": "Beschriftung verbergen",
     "GMNote.settingHint": "Wenn eingeschaltet wird nur das Icon anzeigen",
     "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Ausgewählte GM Notizen in die Beschreibung verschieben",
     "GMNote.moveToNote": "Ausgewählte Beschreibung in die GM Notizen verschieben",
     "GMNote.title": "GM Notizen {document}",
