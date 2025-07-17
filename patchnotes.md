@@ -1,3 +1,7 @@
+10.5
+- Fixed issues with dnd5e
+- Removed support for automatically moving text from journal/actor/item to GM Notes and vice versa
+
 10.4
 - Added GMNote support to rolltables in v13
 
