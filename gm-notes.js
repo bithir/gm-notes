@@ -60,10 +60,8 @@ class GMNote extends FormApplication {
 	}
 
 	get showExtraButtons() {
-		return (
-			(game.dnd5e && this.object.constructor.name !== 'RollTable') ||
-			this.object.constructor.name === 'JournalEntryPage'
-		);
+		return !game.dnd5e && (this.object.constructor.name !== 'RollTable' ||
+			this.object.constructor.name === 'JournalEntryPage');
 	}
 
 	static get defaultOptions() {
@@ -197,7 +195,23 @@ class GMNote extends FormApplication {
 		// if (app instanceof JournalTextPageSheet) return; // can use pages now
 
 		// If user is not GM - don't do anything
-		if (!game.user.isGM) return;
+		console.log("BITHIR APP",app);
+
+		if (!game.user.isGM || !app.document) return;
+		const supportedTypes = [
+			'Tile',
+			'Actor',
+			'Item',
+			'AmbientLight',
+			'Wall',
+			'RollTable',
+			'Drawing',
+			'JournalEntry',
+			'Scene'
+		];
+		if(!supportedTypes.includes(app.document.documentName)) {
+			return;
+		}
 
 		const activateGMNote = ev => {
 			if (app.constructor.name === 'EnhancedJournal') {
@@ -209,6 +223,13 @@ class GMNote extends FormApplication {
 				const page = app.document.pages.get(
 					app.document._sheet.pagesInView[0]?.dataset?.pageId
 				);
+				if(!page) {
+					ui.notifications.warn(game.i18n.localize('GMNote.noPageInJournal'));
+					return;
+				} else if( app.constructor.name === 'JournalEntryPageProseMirrorSheet') {
+					ui.notifications.warn(game.i18n.localize('GMNote.noGMNotesInEditPage'));
+					return;
+				}
 				new GMNote(page, {
 					submitOnClose: true,
 					closeOnSubmit: false,
@@ -696,10 +717,12 @@ const watchedHooksV2 = [
 	'RollTableSheet',
 ];
 //getHeaderControlsAmbientLightConfig
-watchedHooksV2.forEach(hook => {
-	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
+// watchedHooksV2.forEach(hook => {
+//	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
 	// Do not believe this works on ItemSheetV2 - it for sure do not work on all TileConfig Hooks.on(`render${hook}`, GMNote._updateHeaderButtonV2);
-});
+// });
+
+Hooks.on('getHeaderControlsApplicationV2',GMNote._attachHeaderButton);
 
 // Add GM notes to journal pages on render
 Hooks.on('renderJournalPageSheet', GMNote._addContentToJournal);

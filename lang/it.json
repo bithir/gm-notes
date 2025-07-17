@@ -4,6 +4,8 @@
     "GMNote.settingHint": "If checked only the icon will apear",
     "GMNote.setting": "Hide GM Note Label",
     "GMNote.colorSetting": "Change Color when Notes are present",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Move Selected GM Notes to Description",
     "GMNote.moveToNote": "Move Selected Description to GM Notes",
     "GMNote.noSelection": "Nessun testo selezionato da spostare",

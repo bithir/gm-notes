@@ -3,6 +3,8 @@
     "GMNote.setting": "Piilota PJ:n muistiinpanojen nimiö",
     "GMNote.settingHint": "Jos valittu, vain kuvake näytetään",
     "GMNote.colorSetting": "Vaihda väriä, kun tekstissä on muistiinpanoja",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Siirrä valitut PJ:n muistiinpanot kuvaukseen",
     "GMNote.moveToNote": "Siirrä valittu kuvaus PJ:n muistiinpanoihin",
     "GMNote.title": "PJ:n muistiinpanot {document}",

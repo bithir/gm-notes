@@ -3,6 +3,8 @@
     "GMNote.setting": "Cacher les Notes de MJ",
     "GMNote.settingHint": "Si vous cochez cette case, seule l'icône apparaîtra",
     "GMNote.colorSetting": "Change couleur quand contient des Notes de MJ",
+    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Déplacer les Notes du MJ sélectionnées vers Description",
     "GMNote.moveToNote": "Déplacer la Description sélectionnée vers les Notes du MJ",
     "GMNote.title": "Notes du MJ pour {document}",
