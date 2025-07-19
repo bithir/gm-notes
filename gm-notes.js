@@ -195,8 +195,6 @@ class GMNote extends FormApplication {
 		// if (app instanceof JournalTextPageSheet) return; // can use pages now
 
 		// If user is not GM - don't do anything
-		console.log("BITHIR APP",app);
-
 		if (!game.user.isGM || !app.document) return;
 		const supportedTypes = [
 			'Tile',
