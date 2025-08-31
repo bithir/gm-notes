@@ -11,7 +11,7 @@ class GMNote extends FormApplication {
 
 	static showGMNoteWindow() {
 		const win = ui.activeWindow;
-		let gmNoteObject = win?.object;
+		let gmNoteObject = win?.object ?? win?.document;
 		let page = null;
 
 		// Special handling for Journals
@@ -25,7 +25,7 @@ class GMNote extends FormApplication {
 
 		if (page) {
 			gmNoteObject = page;
-		}
+		}		
 
 		// Selection priority
 		// Active window
@@ -33,10 +33,10 @@ class GMNote extends FormApplication {
 		// if the controlled item on the canvas is a TokenDocument, we get the Actor from that
 		if (
 			!win ||
-			win._state != Application.RENDER_STATES.RENDERED ||
-			!win.object
+			win.state != Application.RENDER_STATES.RENDERED ||
+			!gmNoteObject
 		) {
-			const objs = canvas[ui.controls.control.layer].controlled;
+			const objs = canvas[ui.controls.control.name]?.controlled;
 			if (!objs || objs.length == 0) {
 				return;
 			}
@@ -46,7 +46,10 @@ class GMNote extends FormApplication {
 				gmNoteObject = objs[0].document;
 			}
 		}
-
+		if( !gmNoteObject ) {
+			// Can't find suitable document
+			return;
+		}
 		new gmnote.GMNote(gmNoteObject, {
 			submitOnClose: true,
 			closeOnSubmit: false,
@@ -60,8 +63,8 @@ class GMNote extends FormApplication {
 	}
 
 	get showExtraButtons() {
-		return !game.dnd5e && (this.object.constructor.name !== 'RollTable' ||
-			this.object.constructor.name === 'JournalEntryPage');
+		const onlyShow = ['JournalEntryPage']
+		return !game.dnd5e && onlyShow.includes(this.object.documentName);
 	}
 
 	static get defaultOptions() {
@@ -191,10 +194,7 @@ class GMNote extends FormApplication {
 	}
 
 	static _attachHeaderButton(app, buttons) {
-		// Ignore JournalTextPageSheets
-		// if (app instanceof JournalTextPageSheet) return; // can use pages now
-
-		// If user is not GM - don't do anything
+		// If user is not GM - don't do anything, similar if the app lacks document or is not one of the supported types
 		if (!game.user.isGM || !app.document) return;
 		const supportedTypes = [
 			'Tile',
@@ -246,6 +246,7 @@ class GMNote extends FormApplication {
 			// If hide label is true, don't show label
 			label: game.i18n.localize('GMNote.label'),
 			tooltip: game.i18n.localize('GMNote.label'),
+			action: "open-gm-note",
 			class: 'open-gm-note',
 			get icon() {
 				// Get GM Notes
@@ -367,28 +368,36 @@ class GMNote extends FormApplication {
 	}
 
 	static _updateHeaderButtonV2(app, elem) {
-		let gmNotesButton = elem?.querySelector('.open-gm-note');
+
+		if(!(app instanceof GMNote))
+			return;
+		
+		const appObj = app.object;
+		if(!appObj) { return; }
+		// Selector
+		const finder = `#${appObj instanceof JournalEntryPage ? appObj.parent.sheet.id : appObj.sheet.id} li[data-action=open-gm-note] button.control i`;
+		let gmNotesButton = document.querySelector(finder);
+		// console.log("Finding",appObj, finder, gmNotesButton);
+		if(!gmNotesButton) { return; }
 		let notes = '';
 		// Get GM Notes
-		if (app.constructor.name === 'EnhancedJournal') {
-			let notesID = app.subsheet.pagesInView[0]?.dataset?.pageId;
-			notes = app.object.pages.get(notesID).getFlag('gm-notes', 'notes');
-		} else if (app.document.constructor.name === 'JournalEntry') {
-			const currentPageId = app.object._sheet.pagesInView[0]?.dataset?.pageId;
-			const page = app.object.pages.get(currentPageId);
+		if (appObj.constructor.name === 'EnhancedJournal') {
+			let notesID = appObj.subsheet.pagesInView[0]?.dataset?.pageId;
+			notes = appObj.pages.get(notesID).getFlag('gm-notes', 'notes');
+		} else if (appObj.constructor.name === 'JournalEntry') {
+			const currentPageId = appObj._sheet.pagesInView[0]?.dataset?.pageId;
+			const page = appObj.pages.get(currentPageId);
 			notes = page ? page.getFlag('gm-notes', 'notes') : '';
 		} else {
-			notes = app.document.getFlag('gm-notes', 'notes');
+			notes = appObj.getFlag('gm-notes', 'notes');
 		}
-
-		gmNotesButton.style.color =
-			game.settings.get('gm-notes', 'colorLabel') && notes
-				? 'var(--palette-success, green)'
+		const colorChange = game.settings.get('gm-notes', 'colorLabel') && notes
+				? 'gm-notes.green'
 				: '';
 		// Change icon to Check
 		gmNotesButton.className = `open-gm-note fas ${
 			notes ? 'fa-clipboard-check' : 'fa-clipboard'
-		}`;
+		} ${colorChange}`;
 	}
 
 	async _moveToNotes() {
@@ -716,11 +725,13 @@ const watchedHooksV2 = [
 ];
 //getHeaderControlsAmbientLightConfig
 // watchedHooksV2.forEach(hook => {
-//	Hooks.on(`getHeaderControls${hook}`, GMNote._attachHeaderButton);
+
+	// TODO Need one for render to update button, can't use this as this exits if it is not GM notes page
+Hooks.on(`closeApplication`, GMNote._updateHeaderButtonV2);
 	// Do not believe this works on ItemSheetV2 - it for sure do not work on all TileConfig Hooks.on(`render${hook}`, GMNote._updateHeaderButtonV2);
-// });
+//  });
 
 Hooks.on('getHeaderControlsApplicationV2',GMNote._attachHeaderButton);
 
 // Add GM notes to journal pages on render
-Hooks.on('renderJournalPageSheet', GMNote._addContentToJournal);
+Hooks.on('renderJournalPageSheet', GMNote._updateHeaderButtonV2);

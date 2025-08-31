@@ -1,3 +1,7 @@
+10.6
+- Fixed accidental non-update of tick mark (blame autocomplete)
+- Fixed [bithir/gm-notes#56](https://github.com/bithir/gm-notes/issues/56)
+
 10.5
 - Fixed issues with dnd5e
 - Removed support for automatically moving text from journal/actor/item to GM Notes and vice versa

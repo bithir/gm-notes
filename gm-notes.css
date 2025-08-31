@@ -18,3 +18,7 @@
 .gm-notes .gm-notesform {
     height:100%;
 }
+
+.gm-notes.green {
+    color: var(--color-level-success);
+}
