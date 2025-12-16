@@ -26,7 +26,7 @@ export function sendDevMessage()
                 }
                 latestVersion = Math.max(latestVersion, msgenvelope.version);
             }
-            console.log("Message system - latestVersion message after "+latestVersion);
+            // console.log("Message system - latestVersion message after "+latestVersion);
             game.settings.set("gm-notes", 'devMessageVersionNumber', latestVersion);
         })
         .fail(function(data) {

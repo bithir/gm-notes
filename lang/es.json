@@ -15,5 +15,7 @@
     "GMNote.formattingIssuesNotes": "El texto seleccionado no se encontró en las notas actuales del DJ (probablemente problemas de formato). Copiado a la descripción en su lugar",
     "GMNote.migrationCompleted": "Migración de notas del DJ a la primera página de cada diario completada.",
     "GMNote.migrateButton": "Migrar Notas del DJ",
-    "GMNote.migrateButtonHint": "Haga clic en el botón de arriba para migrar las notas del DJ de las entradas del diario a la primera página de cada diario."
+    "GMNote.migrateButtonHint": "Haga clic en el botón de arriba para migrar las notas del DJ de las entradas del diario a la primera página de cada diario.",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
 }

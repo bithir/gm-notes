@@ -17,5 +17,7 @@
     "GMNote.formattingIssuesNotes": "Wybrany tekst nie został znaleziony w bieżących notatkach MG (prawdopodobnie problemy z formatowaniem). Skopiowano do opisu zamiast tego",
     "GMNote.migrationCompleted": "Migracja notatek MG do pierwszej strony każdego dziennika zakończona.",
     "GMNote.migrateButton": "Migruj Notatki MG",
-    "GMNote.migrateButtonHint": "Kliknij przycisk powyżej, aby przenieść notatki MG z wpisów dziennika na pierwszą stronę każdego dziennika."
+    "GMNote.migrateButtonHint": "Kliknij przycisk powyżej, aby przenieść notatki MG z wpisów dziennika na pierwszą stronę każdego dziennika.",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
 }
