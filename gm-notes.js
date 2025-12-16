@@ -682,6 +682,13 @@ Hooks.on('renderSettingsConfig', (app, html, data) => {
 Hooks.once('ready', async function () {
 	if (game.user.isGM) {
 		sendDevMessage();
+// Support for other modules
+		Hooks.on('tokenNoteHover.createContent', (actor, imageDisplay, contentMap) => {			
+			if(actor.flags['gm-notes']?.notes ) {
+				const html = `<div class="gm-notes"><h4 class="header">${game.i18n.localize('GMNote.label')}</h3><p>${actor.flags['gm-notes']?.notes}</p></div>`;
+				contentMap.content = contentMap.content+html; 
+			}
+		});		
 	}
 	console.info(`gm-notes | Module[gm-notes] ready hook complete`);
 });
@@ -735,3 +742,5 @@ Hooks.on('getHeaderControlsApplicationV2',GMNote._attachHeaderButton);
 
 // Add GM notes to journal pages on render
 Hooks.on('renderJournalPageSheet', GMNote._updateHeaderButtonV2);
+
+

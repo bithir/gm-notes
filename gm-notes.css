@@ -22,3 +22,7 @@
 .gm-notes.green {
     color: var(--color-level-success);
 }
+
+.token-note-hover-hud-container .gm-notes .header {
+    color: #ED985F;
+}

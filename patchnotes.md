@@ -1,3 +1,9 @@
+11.0
+- Added support for [Token Hover Notes](https://foundryvtt.com/packages/token-hover-notes/) module
+
+10.7
+- Removed debugging log lines
+
 10.6
 - Fixed accidental non-update of tick mark (blame autocomplete)
 - Fixed [bithir/gm-notes#56](https://github.com/bithir/gm-notes/issues/56)
