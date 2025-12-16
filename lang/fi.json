@@ -15,5 +15,7 @@
     "GMNote.formattingIssuesNotes": "Valittua tekstiä ei löytynyt nykyisistä PJ:n muistiinpanoista (todennäköisesti muotoiluongelmia). Kopioidaan sen sijaan kuvaukseen",
     "GMNote.migrationCompleted": "PJ:n muistiinpanojen siirto kunkin päiväkirjan ensimmäiselle sivulle valmis.",
     "GMNote.migrateButton": "Siirrä PJ:n muistiinpanot",
-    "GMNote.migrateButtonHint": "Napsauta yllä olevaa painiketta siirtääksesi PJ:n muistiinpanot päiväkirjamerkinnöistä kunkin päiväkirjan ensimmäiselle sivulle."
+    "GMNote.migrateButtonHint": "Napsauta yllä olevaa painiketta siirtääksesi PJ:n muistiinpanot päiväkirjamerkinnöistä kunkin päiväkirjan ensimmäiselle sivulle.",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
 }

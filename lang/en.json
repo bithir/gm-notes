@@ -18,6 +18,8 @@
     "GMNote.migrateButtonHint":"Click the button above to migrate GM notes from journal entries to the first page of each journal.",
 
     "GMNote.hotKeyName":"Show GM Notes",
-    "GMNote.hotKeyHint":"This will open GM Notes for the current active window or selected canvas object"
-    
+    "GMNote.hotKeyHint":"This will open GM Notes for the current active window or selected canvas object",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
+
 }

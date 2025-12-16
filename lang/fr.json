@@ -15,5 +15,7 @@
     "GMNote.formattingIssuesNotes": "Le texte sélectionné n'a pas été trouvé dans les notes du MJ actuelles (probablement des problèmes de formatage). Copié dans la description à la place",
     "GMNote.migrationCompleted": "Migration des notes du MJ vers la première page de chaque journal terminée.",
     "GMNote.migrateButton": "Migrer les Notes du MJ",
-    "GMNote.migrateButtonHint": "Cliquez sur le bouton ci-dessus pour migrer les notes du MJ des entrées de journal vers la première page de chaque journal."
+    "GMNote.migrateButtonHint": "Cliquez sur le bouton ci-dessus pour migrer les notes du MJ des entrées de journal vers la première page de chaque journal.",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
 }

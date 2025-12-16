@@ -623,6 +623,15 @@ Hooks.once('init', () => {
 		default: false,
 		type: Boolean,
 	});
+
+	game.settings.register('gm-notes', 'showInTokenNoteHover', {
+		name: game.i18n.localize('GMNote.showInTokenNoteHover'),
+		scope: 'user',
+		config: game.modules.get('token-note-hover')?.active,
+		default: true,
+		type: Boolean,
+	});	
+
 	game.settings.register('gm-notes', 'devMessageVersionNumber', {
 		name: 'Development message version',
 		scope: 'world',
@@ -684,7 +693,7 @@ Hooks.once('ready', async function () {
 		sendDevMessage();
 // Support for other modules
 		Hooks.on('tokenNoteHover.createContent', (actor, imageDisplay, contentMap) => {			
-			if(actor.flags['gm-notes']?.notes ) {
+			if(game.settings.get('gm-notes', 'showInTokenNoteHover') && actor.flags['gm-notes']?.notes ) {
 				const html = `<div class="gm-notes"><h4 class="header">${game.i18n.localize('GMNote.label')}</h3><p>${actor.flags['gm-notes']?.notes}</p></div>`;
 				contentMap.content = contentMap.content+html; 
 			}

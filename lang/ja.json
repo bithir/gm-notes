@@ -15,5 +15,7 @@
     "GMNote.formattingIssuesNotes": "選択されたテキストが現在のGMノートで見つかりませんでした（フォーマットの問題の可能性）。代わりに説明にコピーされました",
     "GMNote.migrationCompleted": "各ジャーナルの最初のページへのGMノートの移行が完了しました。",
     "GMNote.migrateButton": "GMノートを移行",
-    "GMNote.migrateButtonHint": "上のボタンをクリックして、ジャーナルエントリからGMノートを各ジャーナルの最初のページに移行します。"
+    "GMNote.migrateButtonHint": "上のボタンをクリックして、ジャーナルエントリからGMノートを各ジャーナルの最初のページに移行します。",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
 }

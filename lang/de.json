@@ -15,5 +15,8 @@
     "GMNote.formattingIssuesNotes": "Der ausgewählte Text wurde in den aktuellen GM-Notizen nicht gefunden (wahrscheinlich Formatierungsprobleme). Stattdessen in die Beschreibung kopiert",
     "GMNote.migrationCompleted": "Migration der GM-Notizen zur ersten Seite jedes Journals abgeschlossen.",
     "GMNote.migrateButton": "GM-Notizen migrieren",
-    "GMNote.migrateButtonHint": "Klicken Sie auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren."
+    "GMNote.migrateButtonHint": "Klicken Sie auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren.",
+
+    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
+    
 }

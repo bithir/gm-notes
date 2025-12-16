@@ -15,5 +15,7 @@
     "GMNote.formattingIssuesNotes": "Markerad text hittades inte i de aktuella SL noteringarna (troligen formateringsproblem). Kopierad till beskrivningen istället",
     "GMNote.migrationCompleted": "Migrering av SL noteringar till första sidan av varje journal slutförd.",
     "GMNote.migrateButton": "Migrera SL Noteringar",
-    "GMNote.migrateButtonHint": "Klicka på knappen ovan för att migrera SL noteringar från journalanteckningar till första sidan av varje journal."
+    "GMNote.migrateButtonHint": "Klicka på knappen ovan för att migrera SL noteringar från journalanteckningar till första sidan av varje journal.",
+
+    "GMNote.showInTokenNoteHover":"Visa SL Notering i Token Hover Note inforuta"
 }
