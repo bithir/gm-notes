@@ -45,6 +45,7 @@ class GMNote extends FormApplication {
 			} else {
 				gmNoteObject = objs[0].document;
 			}
+			return true;
 		}
 		if( !gmNoteObject ) {
 			// Can't find suitable document
@@ -658,8 +659,8 @@ Hooks.once('init', () => {
 		name: 'GMNote.hotKeyName',
 		hint: 'GMNote.hotKeyHint',
 		restricted: true,
-		onDown: () => {
-			GMNote.showGMNoteWindow();
+		onDown: (event) => {
+			return GMNote.showGMNoteWindow();
 		},
 		onUp: () => {},
 	};
