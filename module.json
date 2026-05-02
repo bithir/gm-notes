@@ -15,12 +15,12 @@
             "comment": "Original Author"
         }
     ],
-    "minimumCoreVersion": 13,
-    "compatibleCoreVersion": 13,
+    "minimumCoreVersion": 14,
+    "compatibleCoreVersion": 14,
     "compatibility": {
-        "minimum": 13,
-        "verified": 13,
-        "maximum": 13
+        "minimum": 14,
+        "verified": 14,
+        "maximum": 14
     },
     "esmodules": [
         "./gm-notes.js"

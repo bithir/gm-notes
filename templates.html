@@ -1,11 +1,11 @@
-<form class="editable gm-notesform">
-    {{#if isGM}}    
+<div class="gm-notes gm-notes-inner editable gm-notesform">
+    {{#if isGM}}
         {{#if showExtraButtons}}
             <div class="controlls">
-                <button class="moveToNote">{{localize "GMNote.moveToNote"}}</button>
-                <button class="moveToDescription">{{localize "GMNote.moveToDescription"}}</button>
+                <button type="button" class="moveToNote" data-action="moveToNote">{{localize "GMNote.moveToNote"}}</button>
+                <button type="button" class="moveToDescription" data-action="moveToDescription">{{localize "GMNote.moveToDescription"}}</button>
             </div>
         {{/if}}
         {{editor journalNotes target="flags.gm-notes.notes" button=true owner=owner editable=true engine="prosemirror"}}
     {{/if}}
-</form>
+</div>
