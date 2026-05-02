@@ -49,7 +49,7 @@ class GMNote extends HandlebarsApplication {
 		return app.document?.getFlag?.('gm-notes', 'notes') ?? '';
 	}
 
-	static _applyGmNoteV1HeaderAnchor(gmNotesButton, notes) {
+	static _syncGmNoteAnchorHeaderButton(gmNotesButton, notes) {
 		if (!gmNotesButton) return;
 		const hasNotes = !!notes;
 		gmNotesButton.style.color =
@@ -62,8 +62,7 @@ class GMNote extends HandlebarsApplication {
 		}`;
 	}
 
-	/** @param {foundry.abstract.Document} doc Actor/Item/JournalEntry/… owning a sheet */
-	static _v2GmNoteIconSelector(doc) {
+	static _sheetHeaderGmNoteIconSelector(doc) {
 		if (!doc) return null;
 		const sheetOwner = doc instanceof JournalEntryPage ? doc.parent : doc;
 		const id = sheetOwner?.sheet?.id;
@@ -72,8 +71,8 @@ class GMNote extends HandlebarsApplication {
 			: null;
 	}
 
-	static _setV2GmNoteIconFromDocument(doc, notes) {
-		const sel = GMNote._v2GmNoteIconSelector(doc);
+	static _syncSheetHeaderGmNoteIcon(doc, notes) {
+		const sel = GMNote._sheetHeaderGmNoteIconSelector(doc);
 		const gmNotesButton = sel ? document.querySelector(sel) : null;
 		if (!gmNotesButton) return;
 		const colorChange =
@@ -495,10 +494,6 @@ class GMNote extends HandlebarsApplication {
 		return null;
 	}
 
-	async sleep(ms) {
-		return new Promise(resolve => setTimeout(resolve, ms));
-	}
-
 	static async _addContentToJournal(app, html, data) {
 		if (!game.user.isGM) return;
 
@@ -691,20 +686,20 @@ class GMNote extends HandlebarsApplication {
 			if (!gmNotesButton) return;
 
 			const notes = GMNote._getGmNotesForHeaderApp(app);
-			GMNote._applyGmNoteV1HeaderAnchor(gmNotesButton, notes);
+			GMNote._syncGmNoteAnchorHeaderButton(gmNotesButton, notes);
 			if (app.document instanceof foundry.abstract.Document) {
-				GMNote._setV2GmNoteIconFromDocument(app.document, notes);
+				GMNote._syncSheetHeaderGmNoteIcon(app.document, notes);
 			}
 		}, delay);
 	}
 
-	/** After closing the GM Note window, refresh the parent sheet V2 header icon. */
-	static _updateHeaderButtonV2(gmNoteApp) {
+	/** When the GM Note {@link ApplicationV2} closes, refresh the owning sheet’s header GM-note icon. */
+	static _onGmNoteClosed(gmNoteApp) {
 		if (!(gmNoteApp instanceof GMNote)) return;
 		const doc = gmNoteApp.object;
 		if (!doc) return;
 		const notes = doc.getFlag?.('gm-notes', 'notes') ?? '';
-		GMNote._setV2GmNoteIconFromDocument(doc, notes);
+		GMNote._syncSheetHeaderGmNoteIcon(doc, notes);
 	}
 
 	/** Journal page sheet render: inject GM note preview and sync header control. */
@@ -725,11 +720,11 @@ class GMNote extends HandlebarsApplication {
 			? journal.pages.get(currentPageId)
 			: page;
 		const notes = pageForIcon?.getFlag('gm-notes', 'notes') ?? '';
-		GMNote._setV2GmNoteIconFromDocument(pageForIcon ?? page, notes);
+		GMNote._syncSheetHeaderGmNoteIcon(pageForIcon ?? page, notes);
 	}
 
-	/** ApplicationV2 render: refresh GM note header visuals (V1 anchor + V2 control icon). */
-	static _updateHeaderButtonApplicationV2(app, element, context, options) {
+	/** After a sheet / config app renders (App V2), refresh GM-note header visuals (anchor + header-control icon). */
+	static _onSheetApplicationRendered(app, element, context, options) {
 		if (!game.user.isGM) return;
 		if (
 			!(
@@ -753,7 +748,7 @@ class GMNote extends HandlebarsApplication {
 			const notes = GMNote._getGmNotesForHeaderApp(app);
 
 			if (app.document instanceof foundry.abstract.Document) {
-				GMNote._setV2GmNoteIconFromDocument(app.document, notes);
+				GMNote._syncSheetHeaderGmNoteIcon(app.document, notes);
 			}
 
 			if (!win) return;
@@ -784,7 +779,7 @@ class GMNote extends HandlebarsApplication {
 				}
 			}
 			if (gmNotesButton) {
-				GMNote._applyGmNoteV1HeaderAnchor(gmNotesButton, notes);
+				GMNote._syncGmNoteAnchorHeaderButton(gmNotesButton, notes);
 			}
 		}, delay);
 	}
@@ -1129,14 +1124,13 @@ const watchedHooksV2 = [
 	'RollTableSheet',
 ];
 
-Hooks.on('closeApplication', GMNote._updateHeaderButtonV2);
-Hooks.on('closeApplicationV2', GMNote._updateHeaderButtonV2);
+Hooks.on('closeApplicationV2', GMNote._onGmNoteClosed);
 
 Hooks.on('getHeaderControlsApplicationV2', GMNote._attachHeaderButton);
 
-Hooks.on('renderApplicationV2', GMNote._updateHeaderButtonApplicationV2);
+Hooks.on('renderApplicationV2', GMNote._onSheetApplicationRendered);
 watchedHooksV2.forEach(hook => {
-	Hooks.on(`render${hook}`, GMNote._updateHeaderButtonApplicationV2);
+	Hooks.on(`render${hook}`, GMNote._onSheetApplicationRendered);
 });
 
 Hooks.on('renderJournalPageSheet', GMNote._onRenderJournalPageSheet);
