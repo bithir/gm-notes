@@ -4,8 +4,10 @@ export function sendDevMessage()
     if( game.user.isGM ) {
         let jqxhr = $.getJSON( "https://raw.githubusercontent.com/bithir/gm-notes/master/msgdata/data.json", function(data) 
         {                    
-            let latestVersion = game.settings.get("gm-notes", 'devMessageVersionNumber');
-            if(isNaN(latestVersion)) {
+            let latestVersion = Number(
+                game.settings.get('gm-notes', 'devMessageVersionNumber')
+            );
+            if (!Number.isFinite(latestVersion)) {
                 latestVersion = 0;
             }
             if(data.messages === undefined || data.messages === null || data.messages.length === undefined) {
@@ -24,10 +26,17 @@ export function sendDevMessage()
                         content: msgenvelope.message        
                     });        
                 }
-                latestVersion = Math.max(latestVersion, msgenvelope.version);
+                latestVersion = Math.max(
+                    latestVersion,
+                    Number(msgenvelope.version) || 0
+                );
             }
             // console.log("Message system - latestVersion message after "+latestVersion);
-            game.settings.set("gm-notes", 'devMessageVersionNumber', latestVersion);
+            game.settings.set(
+                'gm-notes',
+                'devMessageVersionNumber',
+                String(latestVersion)
+            );
         })
         .fail(function(data) {
             console.error("Could not retreive GM Notes mods news Message:"+JSON.stringify(data));

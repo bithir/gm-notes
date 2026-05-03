@@ -1,3 +1,7 @@
+12.0
+- Updated for Foundry v14.
+- Now using AppV2 standards, ensuring future compatibility.
+
 11.0
 - Added support for [Token Hover Notes](https://foundryvtt.com/packages/token-hover-notes/) module
 
