@@ -3,8 +3,8 @@
     "GMNote.setting": "Beschriftung verbergen",
     "GMNote.settingHint": "Wenn eingeschaltet wird nur das Icon anzeigen",
     "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
-    "GMNote.noPageInJournal":"There needs to be a page in the journal to create GM Notes",
-    "GMNote.noGMNotesInEditPage":"GM Notes can't be edited on the Edit Page",
+    "GMNote.noPageInJournal": "There needs to be a page in the journal to create GM Notes",
+    "GMNote.noGMNotesInEditPage": "GM Notes can't be edited on the Edit Page",
     "GMNote.moveToDescription": "Ausgewählte GM Notizen in die Beschreibung verschieben",
     "GMNote.moveToNote": "Ausgewählte Beschreibung in die GM Notizen verschieben",
     "GMNote.title": "GM Notizen {document}",
@@ -16,7 +16,7 @@
     "GMNote.migrationCompleted": "Migration der GM-Notizen zur ersten Seite jedes Journals abgeschlossen.",
     "GMNote.migrateButton": "GM-Notizen migrieren",
     "GMNote.migrateButtonHint": "Klicken Sie auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren.",
-
-    "GMNote.showInTokenNoteHover":"Show GM Notes in Token Hover Note tooltip"
-    
+    "GMNote.hotKeyHint": "Dies öffnet die GM-Notizen im aktuellen aktiven Fenster oder im ausgewählten Canvas-Objek",
+    "GMNote.hotKeyName": "Zeige GM-Notizen",
+    "GMNote.showInTokenNoteHover": "Show GM Notes in Token Hover Note tooltip"
 }
