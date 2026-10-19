@@ -1,3 +1,6 @@
+12.1
+- German Translations update from DeanKuck via weblate.
+
 12.0
 - Updated for Foundry v14.
 - Now using AppV2 standards, ensuring future compatibility.
