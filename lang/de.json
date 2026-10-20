@@ -1,12 +1,12 @@
 {
-    "GMNote.label": "GM Notizen",
+    "GMNote.label": "GM-Notizen",
     "GMNote.setting": "Beschriftung verbergen",
     "GMNote.settingHint": "Wenn eingeschaltet wird nur das Icon anzeigen",
-    "GMNote.colorSetting": "Ändere die Iconfarbe wenn Notitzen existieren",
-    "GMNote.noPageInJournal": "There needs to be a page in the journal to create GM Notes",
-    "GMNote.noGMNotesInEditPage": "GM Notes can't be edited on the Edit Page",
-    "GMNote.moveToDescription": "Ausgewählte GM Notizen in die Beschreibung verschieben",
-    "GMNote.moveToNote": "Ausgewählte Beschreibung in die GM Notizen verschieben",
+    "GMNote.colorSetting": "Ändere die Iconfarbe, wenn Notizen existieren",
+    "GMNote.noPageInJournal": "Es muss eine Seite im Journal vorhanden sein, um GM-Notizen zu erstellen",
+    "GMNote.noGMNotesInEditPage": "GM-Notizen können auf der Bearbeitungsseite nicht bearbeitet werden",
+    "GMNote.moveToDescription": "Ausgewählte GM-Notizen in die Beschreibung verschieben",
+    "GMNote.moveToNote": "Ausgewählte Beschreibung in die GM-Notizen verschieben",
     "GMNote.title": "GM Notizen {document}",
     "GMNote.noSelection": "Kein Text zum Verschieben ausgewählt",
     "GMNote.copiedToNotes": "Der ausgewählte Text stammt nicht von der aktuellen Seite. Stattdessen in GM-Notizen kopiert",
@@ -15,8 +15,8 @@
     "GMNote.formattingIssuesNotes": "Der ausgewählte Text wurde in den aktuellen GM-Notizen nicht gefunden (wahrscheinlich Formatierungsprobleme). Stattdessen in die Beschreibung kopiert",
     "GMNote.migrationCompleted": "Migration der GM-Notizen zur ersten Seite jedes Journals abgeschlossen.",
     "GMNote.migrateButton": "GM-Notizen migrieren",
-    "GMNote.migrateButtonHint": "Klicken Sie auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren.",
-    "GMNote.hotKeyHint": "Dies öffnet die GM-Notizen im aktuellen aktiven Fenster oder im ausgewählten Canvas-Objek",
+    "GMNote.migrateButtonHint": "Klicke auf den obigen Button, um GM-Notizen von Journaleinträgen zur ersten Seite jedes Journals zu migrieren.",
+    "GMNote.hotKeyHint": "Dies öffnet die GM-Notizen im aktuellen aktiven Fenster oder im ausgewählten Canvas-Objekt",
     "GMNote.hotKeyName": "Zeige GM-Notizen",
-    "GMNote.showInTokenNoteHover": "Show GM Notes in Token Hover Note tooltip"
+    "GMNote.showInTokenNoteHover": "GM-Notizen im Tooltip beim Überfahren eines Tokens anzeigen"
 }
