@@ -1,3 +1,6 @@
+12.2
+- Further German Translations updates from DeanKuck via weblate.
+
 12.1
 - German Translations update from DeanKuck via weblate.
 
